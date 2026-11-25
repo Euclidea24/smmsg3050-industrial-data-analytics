@@ -1,0 +1,2 @@
+# Pinned after the dataset and stack are fixed.
+# Add one dependency per line with an exact version, e.g. pandas==2.2.3
