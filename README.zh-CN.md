@@ -108,9 +108,10 @@ pip install -r requirements.txt
 
 ## 协作流程
 
-- 完整流程见 [`CONTRIBUTING.md`](CONTRIBUTING.md)；开 PR 时按 [PR 模板](.github/pull_request_template.md) 填写。
-- `main` 是集成分支。开发用短分支：`feat/...`、`exp/...`、`docs/...`、`fix/...`。
-- 任何改动共享结果、代码或报告正文的工作都开 Pull Request，至少一名队友看过后由作者合并；纯错字、链接、格式修正可自检后合并。
+- 完整流程见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
+- 直接推 `main`，不需要 PR 或队友审核。
+- 推前先 pull/merge `origin/main`；不强推 `main`，不覆盖队友工作。
+- 每天 22:00 前由一位成员轮值在 [`docs/VERSIONS.md`](docs/VERSIONS.md) 总结并打 tag `v0.x`；这是回滚点，不是审批点。
 - PR 尽量小且单一主题，不要在一个 PR 里混数据、代码和报告改动。
 - 任务用 Issue 跟踪。建议标签：`data`、`model`、`eval`、`report`、`slides`、`blocked`。
 - 决策要落到仓库里（Issue、PR 或对应的 `docs/` 文件），不要只留在聊天记录。

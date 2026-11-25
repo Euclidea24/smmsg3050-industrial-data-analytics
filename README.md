@@ -108,9 +108,10 @@ Decision record: [`docs/00-topic-selection.md`](docs/00-topic-selection.md). Can
 
 ## Collaboration workflow
 
-- Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full workflow; when opening a pull request, follow the [PR template](.github/pull_request_template.md).
-- `main` is the integration branch. Use short-lived branches: `feat/...`, `exp/...`, `docs/...`, `fix/...`.
-- Open a pull request for anything that changes shared results, code, or report text: pure typo, link, and formatting fixes can be self-checked and merged; anything else needs at least one teammate to look at it before merge.
+- Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full workflow.
+- Push directly to `main`; no PR or teammate review is required.
+- Pull or merge `origin/main` before pushing; never force-push `main` or overwrite a teammate's work.
+- Every day before 22:00, one rotating member writes the summary in [`docs/VERSIONS.md`](docs/VERSIONS.md) and tags `v0.x`. This is a rollback point, not an approval gate.
 - Keep pull requests small and scoped; do not mix data, code, and report changes in one PR.
 - Use issues for tasks. Suggested labels: `data`, `model`, `eval`, `report`, `slides`, `blocked`.
 - Decisions belong in the repository (issue, PR, or the relevant `docs/` file), not only in chat.

@@ -2,13 +2,19 @@
 
 3–4 人，2026-11-28 硬截止，public 仓库。只保留会影响结果的规则；技术栈和数据集未定，不预设立场。
 
-## 分支与 PR
+## 直接推送
 
-- 所有改动从最新 `main` 开短分支，分支名 `<名字>/<主题>`，例如 `junbin/topic-choice`。
-- 改完推分支、开 PR，`base` 选 `main`；按 [PR 模板](.github/pull_request_template.md) 写清改动和验证。
-- 影响共享结果、代码或报告正文的改动，至少一名队友看过后再合并；只改错字、链接、格式的 PR 可自检后合并。
-- 冲突时在自己分支 `git merge origin/main`，和原作者核对两边意图后再解决。
+- 所有成员直接推 `main`，不需要 PR 或队友审核。
+- 推前先 `git pull --ff-only origin main`；有分叉就 `git merge origin/main`，解决冲突后再推。
 - 不覆盖队友未提交的改动，不强推 `main`，不用 `reset --hard` 处理未知改动。
+- 需要讨论的大改动可以开 PR（[模板](.github/pull_request_template.md)），但不强制、不设审批。
+
+## 大版本
+
+- 每天 22:00 前由一位成员轮值总结一次，打 tag `v0.x`，在 [docs/VERSIONS.md](docs/VERSIONS.md) 记：日期、轮值人、当前数据集、最佳结果、阻塞、下一步。
+- 轮值顺序写在 [docs/VERSIONS.md](docs/VERSIONS.md)；缺席顺延。
+- 大版本是回滚点，不是审批点；不要求代码冻结。
+- 推送 tag：`git push origin v0.x`。
 
 ## 数据与凭证
 
