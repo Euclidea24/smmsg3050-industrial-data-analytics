@@ -82,6 +82,10 @@ git merge origin/main
 - `literature/`：期中文献、阅读笔记与方法迁移评估，见 [literature/README.md](literature/README.md)。
 - 文件名描述主题，避免 `final`、`最终版`；说明文档可带日期，例如 `2026-11-25-number-index.md`。
 
+## 分工状态
+
+报告与幻灯片的具体分工**待定**。角色确定后，在 [docs/06-report-outline.md](docs/06-report-outline.md) 的 Section plan 填 `Owner` 与 `Reviewer`，在 [docs/07-presentation-outline.md](docs/07-presentation-outline.md) 的 Slide plan 填 `Speaker` 与 `Reviewer`；在此之前两张表保持 TBD。
+
 ## 数据与结果边界
 
 - `.env`、token、API key 不入库；凭证放本地环境变量或各人本地文件。

@@ -12,17 +12,19 @@
 
 ## Section plan
 
-| Section | Content | Source doc | Owner | Author | Reviewer | Target length |
-|---|---|---|---|---|---|---|
-| Abstract | Problem, data, method, key result, implication | all | TBD | TBD | TBD | |
-| 1 Introduction | Industrial context, problem, contributions | `01` | TBD | TBD | TBD | |
-| 2 Related work | Methods and comparable studies | — | TBD | TBD | TBD | |
-| 3 Data | Data card, quality audit, preprocessing, splits | `02` | TBD | TBD | TBD | |
-| 4 Methods | Baselines, candidates, selection rule | `03` | TBD | TBD | TBD | |
-| 5 Results | Metrics, uncertainty, segments, errors | `04` | TBD | TBD | TBD | |
-| 6 Discussion | Interpretation, implications, limitations | `05` | TBD | TBD | TBD | |
-| 7 Conclusion | Answer the problem statement | all | TBD | TBD | TBD | |
-| References | Real, verifiable sources only | — | TBD | TBD | TBD | |
+**Division of labor: TBD.** Fill `Owner` and `Reviewer` after the topic and roles are fixed; leave the cells as TBD until then.
+
+| Section | Content | Source doc | Owner | Reviewer | Target length |
+|---|---|---|---|---|---|
+| Abstract | Problem, data, method, key result, implication | all | TBD | TBD | |
+| 1 Introduction | Industrial context, problem, contributions | `01` | TBD | TBD | |
+| 2 Related work | Methods and comparable studies | — | TBD | TBD | |
+| 3 Data | Data card, quality audit, preprocessing, splits | `02` | TBD | TBD | |
+| 4 Methods | Baselines, candidates, selection rule | `03` | TBD | TBD | |
+| 5 Results | Metrics, uncertainty, segments, errors | `04` | TBD | TBD | |
+| 6 Discussion | Interpretation, implications, limitations | `05` | TBD | TBD | |
+| 7 Conclusion | Answer the problem statement | all | TBD | TBD | |
+| References | Real, verifiable sources only | — | TBD | TBD | |
 
 ## Figure and table plan
 
