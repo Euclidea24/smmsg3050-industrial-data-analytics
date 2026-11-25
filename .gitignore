@@ -21,9 +21,6 @@ data/processed/*
 *.npy
 *.npz
 
-# ---- Literature: do not commit published PDFs ----
-literature/**/*.pdf
-
 # ---- Model artifacts ----
 models/
 *.pkl
