@@ -1,0 +1,15 @@
+# Line-ending policy
+#   * text=auto   : normalise ordinary text files
+#   data/raw/**   : -text  → byte-exact, never converted
+# The raw datasets must stay byte-identical to the UCI originals, because
+# docs/data-sources.md pins each file by SHA-256. Any CRLF rewrite would
+# break those hashes, so the whole raw tree is treated as binary.
+
+* text=auto
+
+data/raw/**   -text
+*.npz         binary
+*.pdf         binary
+*.png         binary
+*.jpg         binary
+*.jpeg        binary
