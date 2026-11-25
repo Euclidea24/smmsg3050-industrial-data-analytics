@@ -1,6 +1,8 @@
 # Versions
 
-Every day before 22:00 (Beijing), one member summarizes the current state and tags a major version. The tag is a rollback point, not an approval gate.
+Every day before 22:00 (Beijing), the rotating integrator merges the day's PRs into `main`, writes a summary, and tags a major version. The tag is a rollback point, not an approval gate.
+
+Authors open PRs; the integrator is the only one who merges them. If a PR is urgent, the integrator can merge it earlier, but there is at least one consolidation per day.
 
 | Tag | Date | Integrator | Dataset | Best result | Blockers | Next step |
 |---|---|---|---|---|---|---|

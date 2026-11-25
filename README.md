@@ -109,9 +109,10 @@ Decision record: [`docs/00-topic-selection.md`](docs/00-topic-selection.md). Can
 ## Collaboration workflow
 
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full workflow.
-- Push directly to `main`; no PR or teammate review is required.
-- Pull or merge `origin/main` before pushing; never force-push `main` or overwrite a teammate's work.
-- Every day before 22:00, one rotating member writes the summary in [`docs/VERSIONS.md`](docs/VERSIONS.md) and tags `v0.x`. This is a rollback point, not an approval gate.
+- Open a PR for every change; authors do not merge into `main`.
+- No teammate review is required. The rotating integrator merges the open PRs.
+- Every day before 22:00, the integrator writes the summary in [`docs/VERSIONS.md`](docs/VERSIONS.md) and tags `v0.x`. This is a rollback point, not an approval gate.
+- Never force-push `main` or overwrite a teammate's work.
 - Keep pull requests small and scoped; do not mix data, code, and report changes in one PR.
 - Use issues for tasks. Suggested labels: `data`, `model`, `eval`, `report`, `slides`, `blocked`.
 - Decisions belong in the repository (issue, PR, or the relevant `docs/` file), not only in chat.
