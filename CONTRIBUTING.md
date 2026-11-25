@@ -1,133 +1,31 @@
-# 协作规则与流程
+# 协作规则
 
-本文件是 SMMG3050 课程项目的协作约定，目标是在 2026-11-28 硬截止前让 3–4 人并行工作而不互相覆盖。规则应在 10 分钟内读完。
+3–4 人，2026-11-28 硬截止，public 仓库。只保留会影响结果的规则；技术栈和数据集未定，不预设立场。
 
-## 适用范围与原则
+## 分支与 PR
 
-- **人人可提改动。** 所有成员都可以修改代码、文档和配置，不需要事先申请。
-- **小改动自检后合并。** 只改错字、链接、格式且不触碰报告数字与正文语义的改动，作者自检后可直接合并；代码、图表、报告正文和共享结果走 PR，至少一名队友看过后由作者合并。
-- **保留作者记录。** 合并时保留提交历史和作者信息，不代写队友的观点，不抹掉过去的修订记录。
-- **不覆盖队友文件。** 动手前先看 `git status` 和相关文件；别人未提交的内容先保留并问清来源。
+- 所有改动从最新 `main` 开短分支，分支名 `<名字>/<主题>`，例如 `junbin/topic-choice`。
+- 改完推分支、开 PR，`base` 选 `main`；按 [PR 模板](.github/pull_request_template.md) 写清改动和验证。
+- 影响共享结果、代码或报告正文的改动，至少一名队友看过后再合并；只改错字、链接、格式的 PR 可自检后合并。
+- 冲突时在自己分支 `git merge origin/main`，和原作者核对两边意图后再解决。
+- 不覆盖队友未提交的改动，不强推 `main`，不用 `reset --hard` 处理未知改动。
 
-## 开始前
+## 数据与凭证
 
-1. 确认仓库和远端：
+- `data/raw/`、`data/interim/`、`data/processed/` 的实际数据不入库；`.env`、token、模型权重、逐条预测也不入库。
+- 原始数据只读；清洗结果写 `data/interim/` 或 `data/processed/`。
+- 数据来源、许可证、获取日期和校验和写在 [data/README.md](data/README.md)。
+- 单个文件达到 10 MiB 时先找外部位置，不直接提交。
 
-   ```bash
-   git remote -v
-   git status
-   ```
+## 报告数字复现
 
-2. 从最新 `main` 建短分支，一个主题一个分支：
-
-   ```bash
-   git switch main
-   git pull --ff-only origin main
-   git switch -c feat/short-topic
-   ```
-
-3. 分支前缀：`feat/`（功能）、`exp/`（实验）、`docs/`（文档）、`fix/`（修复），后接短主题，例如 `docs/number-index`。
-4. 先读 README、本文和本次涉及的文件，避免两人同时改同一处。
-
-## 修改与提交
-
-- 修改后先看差异：
-
-  ```bash
-  git status
-  git diff
-  ```
-
-- 逐文件暂存，不用 `git add .` 代替检查：
-
-  ```bash
-  git add path/to/file
-  git diff --cached
-  git diff --cached --check
-  git commit -m "说清这次改了什么"
-  ```
-
-- 提交说明写明改了什么、为什么改；中文或英文均可。
-- 不提交数据、模型权重、凭证和逐条预测；这些留在本地或外部位置。
-
-## PR 与互审
-
-- 推送分支后开 PR，`base` 选 `main`，`compare` 选自己的分支。
-- 按仓库 [PR 模板](.github/pull_request_template.md) 填写：为什么改、改了什么、怎样验证、对其他人有什么影响。
-- 未完成时先开 Draft，完成并自检后再标为 Ready。
-- 影响共享结果的 PR，至少一名队友看过后，作者可自行点击合并；纯文档维护按「适用范围与原则」的自检规则处理。
-- PR 尽量小且单一主题，不混入无关的格式化或文件移动。
-
-## 冲突与同步
-
-在自己的分支、工作已提交后同步：
-
-```bash
-git fetch origin
-git merge origin/main
-```
-
-- 出现冲突时先 `git status` 看文件，比对两边内容；和原作者核对两边的意图后再合并，不整份“采用我的版本”。
-- 解决后按文件 `git add`，重新跑验证，再 `git push`。
-- 不强推 `main`，不用 `reset --hard` 处理未知改动，不删除 `.git`。
-- `git push` 被拒绝时先查网络、权限和远端新提交，不加 `--force`。
-
-## 目录与文件
-
-- `notebooks/`：只做探索，按 `01_`、`02_` 编号，不承载最终结果。
-- `src/`：可复用代码，供 notebook 与脚本导入。
-- `scripts/` + `configs/`：产生报告数字的入口，一个实验一个配置文件。
-- `figures/`：报告与幻灯片导出的图。
-- `reports/`：报告与展示源文件。
-- `literature/`：期中文献、阅读笔记与方法迁移评估，见 [literature/README.md](literature/README.md)。
-- 文件名描述主题，避免 `final`、`最终版`；说明文档可带日期，例如 `2026-11-25-number-index.md`。
-
-## 分工状态
-
-报告与幻灯片的具体分工**待定**。角色确定后，在 [docs/06-report-outline.md](docs/06-report-outline.md) 的 Section plan 填 `Owner` 与 `Reviewer`，在 [docs/07-presentation-outline.md](docs/07-presentation-outline.md) 的 Slide plan 填 `Speaker` 与 `Reviewer`；在此之前两张表保持 TBD。
-
-## 数据与结果边界
-
-- `.env`、token、API key 不入库；凭证放本地环境变量或各人本地文件。
-- `data/raw/`、`data/interim/`、`data/processed/` 的实际数据已被忽略，只提交说明与校验和。
-- 模型产物（`*.pkl`、`*.pt` 等）不入库；权重和逐条预测留在本地或外部位置。
-- 小图与聚合表可以提交；单个文件达到 10 MiB 时先找外部共享位置，不直接提交。
-- 数据集名称、来源、许可证、获取日期和校验和记录在 [data/README.md](data/README.md)。
-
-## 复现与数字
-
-- 每个报告数字都要能对应到：提交 SHA、运行命令、配置文件、数据校验和、输出键。
-- 索引填在 [docs/08-reproducibility.md](docs/08-reproducibility.md) 的 Number index 表。
-- 固定随机种子并写进配置；Python 版本、依赖版本和硬件记录在同一文档。
-- 测试集冻结后不再调参，并记录测试集被评估的次数。
-- 跑不出来的数字从报告中删除，不用“大概”“估计”补位。
+- 报告和幻灯片里的每个数字，都必须能由已提交的脚本 + 配置复现。
+- 在 [docs/08-reproducibility.md](docs/08-reproducibility.md) 的 Number index 记：数字、提交 SHA、命令、配置、数据校验和、输出键。
+- 测试集冻结后不再调参；固定随机种子。
+- 跑不出来的数字删掉，不写“大约”“估计”。
 
 ## AI 使用
 
-- 课程只允许在 Project 中使用 AI，作业与考试严禁使用。
-- 工具、模型、用途和产出登记在 [docs/09-ai-usage-log.md](docs/09-ai-usage-log.md)。
-- 生成的代码要阅读并实际运行；生成的文字要对照来源核实。
+- 课程只允许在 Project 中使用 AI，作业和考试禁用。
+- 在 [docs/09-ai-usage-log.md](docs/09-ai-usage-log.md) 记工具、模型、用途和采纳位置；生成的代码要实际运行，文字要核对来源。
 - 不编造引用、统计量或结果；不把受限数据粘贴到外部服务。
-
-## 规则修订
-
-修改本文件或仓库结构时，在提交或 PR 中写明：
-
-1. 日期与作者。
-2. 原因。
-3. 旧规则 → 新规则。
-4. 受影响的位置（文件、链接、命令）。
-5. 验证结果（链接检查、命令输出等）。
-
-同步更新 [README.md](README.md) 的协作入口；规则变化不改写历史记录。
-
-## 验证标准
-
-| 改动类型 | 怎样检查 |
-|---|---|
-| 文档 | 读 diff，确认路径和链接指向真实文件，没有误删内容 |
-| 代码 / 脚本 | 运行相关命令或最小示例，核对输入输出；在 PR 写实际结果 |
-| 数据摘要 | 核对来源、提交 SHA、命令、配置、校验和与输出键 |
-| 结构 / 规则 | 按新成员阅读顺序走一遍入口，确认 README、本文和链接一致 |
-
-没有运行的检查写“未运行”，不写“全部通过”。
