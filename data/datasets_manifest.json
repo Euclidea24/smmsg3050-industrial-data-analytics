@@ -1,0 +1,1567 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-25T13:08:22Z",
+  "repo": "smmsg3050-industrial-data-analytics",
+  "raw_root": "data/raw",
+  "table_path_note": "table_path/extracted_path are local paths under data/raw/<id>-<slug>/extracted/; they are git-ignored. Run scripts/download_datasets.py to rebuild them from the committed zips.",
+  "count": 15,
+  "summary": {
+    "downloaded_ok": 15,
+    "failed": 0,
+    "total_bytes": 41823870,
+    "largest": {
+      "uci_id": 325,
+      "bytes": 25620028
+    },
+    "fallbacks_used": [],
+    "fallbacks_unused": [
+      374,
+      242,
+      352
+    ],
+    "interval_s": 1.5
+  },
+  "datasets": [
+    {
+      "index": 1,
+      "uci_id": 601,
+      "name": "AI4I 2020 Predictive Maintenance Dataset",
+      "slug": "ai4i+2020+predictive+maintenance+dataset",
+      "source_url": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+      "download_url": "https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip",
+      "retrieved_at_utc": "2026-11-25T12:31:33Z",
+      "license": "CC BY 4.0",
+      "attribution": "UCI Machine Learning Repository (2020). AI4I 2020 Predictive Maintenance Dataset. UCI Machine Learning Repository. https://doi.org/10.24432/C5HS5C",
+      "archive_path": "data/raw/601-ai4i+2020+predictive+maintenance+dataset/601-ai4i+2020+predictive+maintenance+dataset.zip",
+      "bytes": 522170,
+      "sha256": "f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252",
+      "zip_members": [
+        {
+          "name": "ai4i2020.csv",
+          "uncompressed_bytes": 522048,
+          "compressed_bytes": 522048,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/601-ai4i+2020+predictive+maintenance+dataset/extracted",
+      "table_path": "data/raw/601-ai4i+2020+predictive+maintenance+dataset/extracted/ai4i2020.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "header": true,
+      "rows": 10000,
+      "cols": 14,
+      "target": "Machine failure",
+      "task": "binary_classification",
+      "scenario": "CNC 铣床遥测（空气/过程温度、转速、扭矩、刀具磨损）预测设备故障，用于预测性维护。",
+      "notes": "目标列 Machine failure；同表另有 TWF/HDF/PWF/OSF/RNF 故障模式指示列。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 522048,
+      "primary_uci_id": 601,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 10000,
+        "num_features": 6,
+        "tasks": [
+          "Classification",
+          "Regression",
+          "Causal-Discovery"
+        ],
+        "doi": "10.24432/C5HS5C",
+        "year": 2020
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/601-ai4i+2020+predictive+maintenance+dataset/extracted/ai4i2020.csv",
+          "file_bytes": 522048,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ",",
+          "header": true,
+          "rows": 10000,
+          "cols": 14,
+          "columns_preview": [
+            "UDI",
+            "Product ID",
+            "Type",
+            "Air temperature [K]",
+            "Process temperature [K]",
+            "Rotational speed [rpm]",
+            "Torque [Nm]",
+            "Tool wear [min]",
+            "Machine failure",
+            "TWF"
+          ],
+          "columns": [
+            "UDI",
+            "Product ID",
+            "Type",
+            "Air temperature [K]",
+            "Process temperature [K]",
+            "Rotational speed [rpm]",
+            "Torque [Nm]",
+            "Tool wear [min]",
+            "Machine failure",
+            "TWF",
+            "HDF",
+            "PWF",
+            "OSF",
+            "RNF"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 2,
+      "uci_id": 198,
+      "name": "Steel Plates Faults",
+      "slug": "steel+plates+faults",
+      "source_url": "https://archive.ics.uci.edu/dataset/198/steel+plates+faults",
+      "download_url": "https://archive.ics.uci.edu/static/public/198/steel+plates+faults.zip",
+      "retrieved_at_utc": "2026-11-25T12:31:51Z",
+      "license": "CC BY 4.0",
+      "attribution": "M Buscema; S Terzi; W Tastle (2010). Steel Plates Faults. UCI Machine Learning Repository. https://doi.org/10.24432/C5J88N",
+      "archive_path": "data/raw/198-steel+plates+faults/198-steel+plates+faults.zip",
+      "bytes": 100890,
+      "sha256": "cb8eb9859198b63f053e443513036b401746fa517ef58bd17c846c6741c93919",
+      "zip_members": [
+        {
+          "name": "Faults.NNA",
+          "uncompressed_bytes": 299482,
+          "compressed_bytes": 100392,
+          "is_dir": false
+        },
+        {
+          "name": "Faults27x7_var",
+          "uncompressed_bytes": 497,
+          "compressed_bytes": 244,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/198-steel+plates+faults/extracted",
+      "table_path": "data/raw/198-steel+plates+faults/extracted/Faults.NNA",
+      "encoding": "utf-8-sig",
+      "delimiter": "\t",
+      "header": false,
+      "rows": 1941,
+      "cols": 34,
+      "target": "derived from last 7 fault-indicator columns",
+      "task": "multiclass_classification",
+      "scenario": "钢板表面缺陷检测：由 7 个缺陷指示列合成缺陷类别（多标签）。",
+      "notes": "末 7 列 Pastry/Z_Scratch/K_Scatch/Stains/Dirtiness/Bumps/Other_Faults 为 one-hot 指示，需合成类别。 非表成员：Faults27x7_var(documentation)",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 2,
+      "zip_uncompressed_bytes": 299979,
+      "primary_uci_id": 198,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": null,
+      "api": {
+        "num_instances": 1941,
+        "num_features": 27,
+        "tasks": [
+          "Classification"
+        ],
+        "doi": "10.24432/C5J88N",
+        "year": 2010
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/198-steel+plates+faults/extracted/Faults.NNA",
+          "file_bytes": 299482,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": "\t",
+          "header": false,
+          "rows": 1941,
+          "cols": 34,
+          "columns_preview": [],
+          "columns": [],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": [
+        {
+          "path": "data/raw/198-steel+plates+faults/extracted/Faults27x7_var",
+          "kind": "documentation",
+          "reason": "prose/unstructured text (median 1 field per line)"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "uci_id": 179,
+      "name": "SECOM",
+      "slug": "secom",
+      "source_url": "https://archive.ics.uci.edu/dataset/179/secom",
+      "download_url": "https://archive.ics.uci.edu/static/public/179/secom.zip",
+      "retrieved_at_utc": "2026-11-25T12:46:48Z",
+      "license": "CC BY 4.0",
+      "attribution": "Michael McCann; Adrian Johnston (2008). SECOM. UCI Machine Learning Repository. https://doi.org/10.24432/C54305",
+      "archive_path": "data/raw/179-secom/179-secom.zip",
+      "bytes": 1964989,
+      "sha256": "eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e",
+      "zip_members": [
+        {
+          "name": "secom.data",
+          "uncompressed_bytes": 5389983,
+          "compressed_bytes": 1957400,
+          "is_dir": false
+        },
+        {
+          "name": "secom.names",
+          "uncompressed_bytes": 4223,
+          "compressed_bytes": 1869,
+          "is_dir": false
+        },
+        {
+          "name": "secom_labels.data",
+          "uncompressed_bytes": 40638,
+          "compressed_bytes": 5346,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/179-secom/extracted",
+      "table_path": "data/raw/179-secom/extracted/secom.data",
+      "encoding": "utf-8-sig",
+      "delimiter": "whitespace",
+      "header": false,
+      "rows": 1567,
+      "cols": 590,
+      "target": "secom_labels.data column 0 (-1 pass / 1 fail)",
+      "task": "anomaly_detection",
+      "scenario": "半导体制造过程 590 路传感器信号异常检测（良品/不良品）。",
+      "notes": "secom.data 为空白分隔的 590 特征矩阵（缺失记为 NaN）；secom_labels.data 为时间戳 + 标签。 非表成员：secom.names(documentation)",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 3,
+      "zip_uncompressed_bytes": 5434844,
+      "primary_uci_id": 179,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": null,
+      "api": {
+        "num_instances": 1567,
+        "num_features": 591,
+        "tasks": [
+          "Classification",
+          "Causal-Discovery"
+        ],
+        "doi": "10.24432/C54305",
+        "year": 2008
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/179-secom/extracted/secom.data",
+          "file_bytes": 5389983,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": "whitespace",
+          "header": false,
+          "rows": 1567,
+          "cols": 590,
+          "columns_preview": [],
+          "columns": [],
+          "ragged_rows": 0
+        },
+        {
+          "table_path": "data/raw/179-secom/extracted/secom_labels.data",
+          "file_bytes": 40638,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": "whitespace",
+          "header": false,
+          "rows": 1567,
+          "cols": 2,
+          "columns_preview": [],
+          "columns": [],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": [
+        {
+          "path": "data/raw/179-secom/extracted/secom.names",
+          "kind": "documentation",
+          "reason": "metadata/description file (.names)"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "uci_id": 851,
+      "name": "Steel Industry Energy Consumption",
+      "slug": "steel+industry+energy+consumption",
+      "source_url": "https://archive.ics.uci.edu/dataset/851/steel+industry+energy+consumption",
+      "download_url": "https://archive.ics.uci.edu/static/public/851/steel+industry+energy+consumption.zip",
+      "retrieved_at_utc": "2026-11-25T12:47:20Z",
+      "license": "CC BY 4.0",
+      "attribution": "Sathishkumar V E; Changsun Shin; Yongyun Cho (2021). Steel Industry Energy Consumption. UCI Machine Learning Repository. https://doi.org/10.24432/C52G8C",
+      "archive_path": "data/raw/851-steel+industry+energy+consumption/851-steel+industry+energy+consumption.zip",
+      "bytes": 481973,
+      "sha256": "d82d28b33780ff1582507fcf08ae764ff648af459d58234370c551e62aadeaef",
+      "zip_members": [
+        {
+          "name": "Steel_industry_data.csv",
+          "uncompressed_bytes": 2731389,
+          "compressed_bytes": 481813,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/851-steel+industry+energy+consumption/extracted",
+      "table_path": "data/raw/851-steel+industry+energy+consumption/extracted/Steel_industry_data.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "header": true,
+      "rows": 35040,
+      "cols": 11,
+      "target": "Usage_kWh",
+      "task": "time_series_regression",
+      "scenario": "钢铁厂（Daewoo Steel）电力消耗建模与负荷预测。",
+      "notes": "含 CO2、功率因数、无功功率等派生列；时间戳 15 分钟粒度。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 2731389,
+      "primary_uci_id": 851,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 35040,
+        "num_features": 9,
+        "tasks": [
+          "Regression"
+        ],
+        "doi": "10.24432/C52G8C",
+        "year": 2021
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/851-steel+industry+energy+consumption/extracted/Steel_industry_data.csv",
+          "file_bytes": 2731389,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ",",
+          "header": true,
+          "rows": 35040,
+          "cols": 11,
+          "columns_preview": [
+            "date",
+            "Usage_kWh",
+            "Lagging_Current_Reactive.Power_kVarh",
+            "Leading_Current_Reactive_Power_kVarh",
+            "CO2(tCO2)",
+            "Lagging_Current_Power_Factor",
+            "Leading_Current_Power_Factor",
+            "NSM",
+            "WeekStatus",
+            "Day_of_week"
+          ],
+          "columns": [
+            "date",
+            "Usage_kWh",
+            "Lagging_Current_Reactive.Power_kVarh",
+            "Leading_Current_Reactive_Power_kVarh",
+            "CO2(tCO2)",
+            "Lagging_Current_Power_Factor",
+            "Leading_Current_Power_Factor",
+            "NSM",
+            "WeekStatus",
+            "Day_of_week",
+            "Load_Type"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 5,
+      "uci_id": 597,
+      "name": "Productivity Prediction of Garment Employees",
+      "slug": "productivity+prediction+of+garment+employees",
+      "source_url": "https://archive.ics.uci.edu/dataset/597/productivity+prediction+of+garment+employees",
+      "download_url": "https://archive.ics.uci.edu/static/public/597/productivity+prediction+of+garment+employees.zip",
+      "retrieved_at_utc": "2026-11-25T12:47:31Z",
+      "license": "CC BY 4.0",
+      "attribution": "UCI Machine Learning Repository (2020). Productivity Prediction of Garment Employees. UCI Machine Learning Repository. https://doi.org/10.24432/C51S6D",
+      "archive_path": "data/raw/597-productivity+prediction+of+garment+employees/597-productivity+prediction+of+garment+employees.zip",
+      "bytes": 95095,
+      "sha256": "446026846b37d73800d1fd01b852ceaf95f086f15a626802d784154f63885bc2",
+      "zip_members": [
+        {
+          "name": "garments_worker_productivity.csv",
+          "uncompressed_bytes": 94933,
+          "compressed_bytes": 94933,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/597-productivity+prediction+of+garment+employees/extracted",
+      "table_path": "data/raw/597-productivity+prediction+of+garment+employees/extracted/garments_worker_productivity.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "header": true,
+      "rows": 1197,
+      "cols": 15,
+      "target": "actual_productivity",
+      "task": "regression",
+      "scenario": "服装缝纫产线工人实际产出率回归。",
+      "notes": "同时含 targeted_productivity（计划值）；team 为 1-12 编号（类别型）。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 94933,
+      "primary_uci_id": 597,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 1197,
+        "num_features": 14,
+        "tasks": [
+          "Classification",
+          "Regression"
+        ],
+        "doi": "10.24432/C51S6D",
+        "year": 2020
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/597-productivity+prediction+of+garment+employees/extracted/garments_worker_productivity.csv",
+          "file_bytes": 94933,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ",",
+          "header": true,
+          "rows": 1197,
+          "cols": 15,
+          "columns_preview": [
+            "date",
+            "quarter",
+            "department",
+            "day",
+            "team",
+            "targeted_productivity",
+            "smv",
+            "wip",
+            "over_time",
+            "incentive"
+          ],
+          "columns": [
+            "date",
+            "quarter",
+            "department",
+            "day",
+            "team",
+            "targeted_productivity",
+            "smv",
+            "wip",
+            "over_time",
+            "incentive",
+            "idle_time",
+            "idle_men",
+            "no_of_style_change",
+            "no_of_workers",
+            "actual_productivity"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 6,
+      "uci_id": 292,
+      "name": "Wholesale customers",
+      "slug": "wholesale+customers",
+      "source_url": "https://archive.ics.uci.edu/dataset/292/wholesale+customers",
+      "download_url": "https://archive.ics.uci.edu/static/public/292/wholesale+customers.zip",
+      "retrieved_at_utc": "2026-11-25T12:47:38Z",
+      "license": "CC BY 4.0",
+      "attribution": "Margarida Cardoso (2013). Wholesale customers. UCI Machine Learning Repository. https://doi.org/10.24432/C5030X",
+      "archive_path": "data/raw/292-wholesale+customers/292-wholesale+customers.zip",
+      "bytes": 15175,
+      "sha256": "647e6a61683ed23f48c7b04e1e2be78835eca8758b32267603fc42a1479dbfb8",
+      "zip_members": [
+        {
+          "name": "Wholesale customers data.csv",
+          "uncompressed_bytes": 15021,
+          "compressed_bytes": 15021,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/292-wholesale+customers/extracted",
+      "table_path": "data/raw/292-wholesale+customers/extracted/Wholesale customers data.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "header": true,
+      "rows": 440,
+      "cols": 8,
+      "target": "none (6 annual spending columns)",
+      "task": "clustering",
+      "scenario": "批发分销商客户分群（6 个品类年采购额 + Channel/Region）。",
+      "notes": "聚类基准集；6 个金额列为 Fresh/Milk/Grocery/Frozen/Detergents_Paper/Delicassen。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 15021,
+      "primary_uci_id": 292,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": null,
+      "api": {
+        "num_instances": 440,
+        "num_features": 7,
+        "tasks": [
+          "Classification",
+          "Clustering"
+        ],
+        "doi": "10.24432/C5030X",
+        "year": 2013
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/292-wholesale+customers/extracted/Wholesale customers data.csv",
+          "file_bytes": 15021,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ",",
+          "header": true,
+          "rows": 440,
+          "cols": 8,
+          "columns_preview": [
+            "Channel",
+            "Region",
+            "Fresh",
+            "Milk",
+            "Grocery",
+            "Frozen",
+            "Detergents_Paper",
+            "Delicassen"
+          ],
+          "columns": [
+            "Channel",
+            "Region",
+            "Fresh",
+            "Milk",
+            "Grocery",
+            "Frozen",
+            "Detergents_Paper",
+            "Delicassen"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 7,
+      "uci_id": 560,
+      "name": "Seoul Bike Sharing Demand",
+      "slug": "seoul+bike+sharing+demand",
+      "source_url": "https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand",
+      "download_url": "https://archive.ics.uci.edu/static/public/560/seoul+bike+sharing+demand.zip",
+      "retrieved_at_utc": "2026-11-25T12:47:48Z",
+      "license": "CC BY 4.0",
+      "attribution": "Sathishkumar Veerappampalayam  Easwaramoorthy (2020). Seoul Bike Sharing Demand. UCI Machine Learning Repository. https://doi.org/10.24432/C5F62R",
+      "archive_path": "data/raw/560-seoul+bike+sharing+demand/560-seoul+bike+sharing+demand.zip",
+      "bytes": 604298,
+      "sha256": "139e9908f0a3544bb222386855c9ce107e96467306bb8e4ce936aab59e7baac4",
+      "zip_members": [
+        {
+          "name": "SeoulBikeData.csv",
+          "uncompressed_bytes": 604166,
+          "compressed_bytes": 604166,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/560-seoul+bike+sharing+demand/extracted",
+      "table_path": "data/raw/560-seoul+bike+sharing+demand/extracted/SeoulBikeData.csv",
+      "encoding": "cp1252",
+      "delimiter": ",",
+      "header": true,
+      "rows": 8760,
+      "cols": 14,
+      "target": "Rented Bike Count",
+      "task": "time_series_regression",
+      "scenario": "首尔公共自行车按小时租借需求预测。",
+      "notes": "逐小时 8760 行；含季节/节假日/天气协变量。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 604166,
+      "primary_uci_id": 560,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 8760,
+        "num_features": 13,
+        "tasks": [
+          "Regression"
+        ],
+        "doi": "10.24432/C5F62R",
+        "year": 2020
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/560-seoul+bike+sharing+demand/extracted/SeoulBikeData.csv",
+          "file_bytes": 604166,
+          "parsed": true,
+          "notes": "",
+          "encoding": "cp1252",
+          "delimiter": ",",
+          "header": true,
+          "rows": 8760,
+          "cols": 14,
+          "columns_preview": [
+            "Date",
+            "Rented Bike Count",
+            "Hour",
+            "Temperature(°C)",
+            "Humidity(%)",
+            "Wind speed (m/s)",
+            "Visibility (10m)",
+            "Dew point temperature(°C)",
+            "Solar Radiation (MJ/m2)",
+            "Rainfall(mm)"
+          ],
+          "columns": [
+            "Date",
+            "Rented Bike Count",
+            "Hour",
+            "Temperature(°C)",
+            "Humidity(%)",
+            "Wind speed (m/s)",
+            "Visibility (10m)",
+            "Dew point temperature(°C)",
+            "Solar Radiation (MJ/m2)",
+            "Rainfall(mm)",
+            "Snowfall (cm)",
+            "Seasons",
+            "Holiday",
+            "Functioning Day"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 8,
+      "uci_id": 849,
+      "name": "Power Consumption of Tetouan City",
+      "slug": "power+consumption+of+tetouan+city",
+      "source_url": "https://archive.ics.uci.edu/dataset/849/power+consumption+of+tetouan+city",
+      "download_url": "https://archive.ics.uci.edu/static/public/849/power+consumption+of+tetouan+city.zip",
+      "retrieved_at_utc": "2026-11-25T12:48:05Z",
+      "license": "CC BY 4.0",
+      "attribution": "Abdulwahed Salam; Abdelaaziz El Hibaoui (2018). Power Consumption of Tetouan City. UCI Machine Learning Repository. https://doi.org/10.24432/C5B034",
+      "archive_path": "data/raw/849-power+consumption+of+tetouan+city/849-power+consumption+of+tetouan+city.zip",
+      "bytes": 1401688,
+      "sha256": "3c4bf684161180937043a9fb65701a83d44b740b0d42f0492b6e7aec57ddbbfe",
+      "zip_members": [
+        {
+          "name": "Tetuan City power consumption.csv",
+          "uncompressed_bytes": 4222390,
+          "compressed_bytes": 1401508,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/849-power+consumption+of+tetouan+city/extracted",
+      "table_path": "data/raw/849-power+consumption+of+tetouan+city/extracted/Tetuan City power consumption.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "header": true,
+      "rows": 52416,
+      "cols": 9,
+      "target": "Zone 1 Power Consumption",
+      "task": "time_series_regression",
+      "scenario": "摩洛哥 Tetouan 市三个供电分区 10 分钟粒度负荷预测。",
+      "notes": "另含 Zone 2/Zone 3 Power Consumption 及天气列。 API num_instances=52417 比数据行数多 1（API 把表头行计入）",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 4222390,
+      "primary_uci_id": 849,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 52417,
+        "num_features": 6,
+        "tasks": [
+          "Regression"
+        ],
+        "doi": "10.24432/C5B034",
+        "year": 2018
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/849-power+consumption+of+tetouan+city/extracted/Tetuan City power consumption.csv",
+          "file_bytes": 4222390,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ",",
+          "header": true,
+          "rows": 52416,
+          "cols": 9,
+          "columns_preview": [
+            "DateTime",
+            "Temperature",
+            "Humidity",
+            "Wind Speed",
+            "general diffuse flows",
+            "diffuse flows",
+            "Zone 1 Power Consumption",
+            "Zone 2  Power Consumption",
+            "Zone 3  Power Consumption"
+          ],
+          "columns": [
+            "DateTime",
+            "Temperature",
+            "Humidity",
+            "Wind Speed",
+            "general diffuse flows",
+            "diffuse flows",
+            "Zone 1 Power Consumption",
+            "Zone 2  Power Consumption",
+            "Zone 3  Power Consumption"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 9,
+      "uci_id": 186,
+      "name": "Wine Quality",
+      "slug": "wine+quality",
+      "source_url": "https://archive.ics.uci.edu/dataset/186/wine+quality",
+      "download_url": "https://archive.ics.uci.edu/static/public/186/wine+quality.zip",
+      "retrieved_at_utc": "2026-11-25T12:48:17Z",
+      "license": "CC BY 4.0",
+      "attribution": "Paulo Cortez; A. Cerdeira; F. Almeida; T. Matos; J. Reis (2009). Wine Quality. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T",
+      "archive_path": "data/raw/186-wine+quality/186-wine+quality.zip",
+      "bytes": 91353,
+      "sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+      "zip_members": [
+        {
+          "name": "winequality-red.csv",
+          "uncompressed_bytes": 84199,
+          "compressed_bytes": 22684,
+          "is_dir": false
+        },
+        {
+          "name": "winequality-white.csv",
+          "uncompressed_bytes": 264426,
+          "compressed_bytes": 66747,
+          "is_dir": false
+        },
+        {
+          "name": "winequality.names",
+          "uncompressed_bytes": 3305,
+          "compressed_bytes": 1510,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/186-wine+quality/extracted",
+      "table_path": "data/raw/186-wine+quality/extracted/winequality-red.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ";",
+      "header": true,
+      "rows": 1599,
+      "cols": 12,
+      "target": "quality",
+      "task": "regression",
+      "scenario": "红/白葡萄酒理化指标预测感官质量评分。",
+      "notes": "两个独立表：winequality-red.csv 与 winequality-white.csv（分隔符 ';'），合计 6497 行。 非表成员：winequality.names(documentation)",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 3,
+      "zip_uncompressed_bytes": 351930,
+      "primary_uci_id": 186,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 4898,
+        "num_features": 11,
+        "tasks": [
+          "Classification",
+          "Regression"
+        ],
+        "doi": "10.24432/C56S3T",
+        "year": 2009
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/186-wine+quality/extracted/winequality-red.csv",
+          "file_bytes": 84199,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ";",
+          "header": true,
+          "rows": 1599,
+          "cols": 12,
+          "columns_preview": [
+            "fixed acidity",
+            "volatile acidity",
+            "citric acid",
+            "residual sugar",
+            "chlorides",
+            "free sulfur dioxide",
+            "total sulfur dioxide",
+            "density",
+            "pH",
+            "sulphates"
+          ],
+          "columns": [
+            "fixed acidity",
+            "volatile acidity",
+            "citric acid",
+            "residual sugar",
+            "chlorides",
+            "free sulfur dioxide",
+            "total sulfur dioxide",
+            "density",
+            "pH",
+            "sulphates",
+            "alcohol",
+            "quality"
+          ],
+          "ragged_rows": 0
+        },
+        {
+          "table_path": "data/raw/186-wine+quality/extracted/winequality-white.csv",
+          "file_bytes": 264426,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ";",
+          "header": true,
+          "rows": 4898,
+          "cols": 12,
+          "columns_preview": [
+            "fixed acidity",
+            "volatile acidity",
+            "citric acid",
+            "residual sugar",
+            "chlorides",
+            "free sulfur dioxide",
+            "total sulfur dioxide",
+            "density",
+            "pH",
+            "sulphates"
+          ],
+          "columns": [
+            "fixed acidity",
+            "volatile acidity",
+            "citric acid",
+            "residual sugar",
+            "chlorides",
+            "free sulfur dioxide",
+            "total sulfur dioxide",
+            "density",
+            "pH",
+            "sulphates",
+            "alcohol",
+            "quality"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": [
+        {
+          "path": "data/raw/186-wine+quality/extracted/winequality.names",
+          "kind": "documentation",
+          "reason": "metadata/description file (.names)"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "uci_id": 471,
+      "name": "Electrical Grid Stability Simulated Data",
+      "slug": "electrical+grid+stability+simulated+data",
+      "source_url": "https://archive.ics.uci.edu/dataset/471/electrical+grid+stability+simulated+data",
+      "download_url": "https://archive.ics.uci.edu/static/public/471/electrical+grid+stability+simulated+data.zip",
+      "retrieved_at_utc": "2026-11-25T12:48:26Z",
+      "license": "CC BY 4.0",
+      "attribution": "Vadim Arzamasov (2018). Electrical Grid Stability Simulated Data . UCI Machine Learning Repository. https://doi.org/10.24432/C5PG66",
+      "archive_path": "data/raw/471-electrical+grid+stability+simulated+data/471-electrical+grid+stability+simulated+data.zip",
+      "bytes": 2418013,
+      "sha256": "32eeb20cf1877127aade7c9a76a6ab6f2ff1fdd05270bc591d549f26c7402cad",
+      "zip_members": [
+        {
+          "name": "Data_for_UCI_named.csv",
+          "uncompressed_bytes": 2417871,
+          "compressed_bytes": 2417871,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/471-electrical+grid+stability+simulated+data/extracted",
+      "table_path": "data/raw/471-electrical+grid+stability+simulated+data/extracted/Data_for_UCI_named.csv",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "header": true,
+      "rows": 10000,
+      "cols": 14,
+      "target": "stabf",
+      "task": "binary_classification",
+      "scenario": "电网暂态稳定仿真数据的二分类判定（stable / unstable）。",
+      "notes": "stabf 为类别标签，stability 为连续裕度目标；12 个连续特征 + 2 个目标。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 2417871,
+      "primary_uci_id": 471,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 10000,
+        "num_features": 12,
+        "tasks": [
+          "Classification",
+          "Regression"
+        ],
+        "doi": "10.24432/C5PG66",
+        "year": 2018
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/471-electrical+grid+stability+simulated+data/extracted/Data_for_UCI_named.csv",
+          "file_bytes": 2417871,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": ",",
+          "header": true,
+          "rows": 10000,
+          "cols": 14,
+          "columns_preview": [
+            "tau1",
+            "tau2",
+            "tau3",
+            "tau4",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "g1",
+            "g2"
+          ],
+          "columns": [
+            "tau1",
+            "tau2",
+            "tau3",
+            "tau4",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "g1",
+            "g2",
+            "g3",
+            "g4",
+            "stab",
+            "stabf"
+          ],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 11,
+      "uci_id": 291,
+      "name": "Airfoil Self-Noise",
+      "slug": "airfoil+self+noise",
+      "source_url": "https://archive.ics.uci.edu/dataset/291/airfoil+self+noise",
+      "download_url": "https://archive.ics.uci.edu/static/public/291/airfoil+self+noise.zip",
+      "retrieved_at_utc": "2026-11-25T12:48:43Z",
+      "license": "CC BY 4.0",
+      "attribution": "Thomas Brooks; D. Pope; Michael Marcolini (1989). Airfoil Self-Noise. UCI Machine Learning Repository. https://doi.org/10.24432/C5VW2C",
+      "archive_path": "data/raw/291-airfoil+self+noise/291-airfoil+self+noise.zip",
+      "bytes": 60126,
+      "sha256": "5c7767ba53ad827d3f48ba1eb9434117f4892df8f10bc4c99e118a9e8a7ae07c",
+      "zip_members": [
+        {
+          "name": "airfoil_self_noise.dat",
+          "uncompressed_bytes": 59984,
+          "compressed_bytes": 59984,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/291-airfoil+self+noise/extracted",
+      "table_path": "data/raw/291-airfoil+self+noise/extracted/airfoil_self_noise.dat",
+      "encoding": "utf-8-sig",
+      "delimiter": "\t",
+      "header": false,
+      "rows": 1503,
+      "cols": 6,
+      "target": "last column (scaled sound pressure level)",
+      "task": "regression",
+      "scenario": "翼型自噪声声压级回归（NASA 风洞实验）。",
+      "notes": "无表头文件；5 个几何/气流特征 + 末列声压级。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 59984,
+      "primary_uci_id": 291,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": null,
+      "api": {
+        "num_instances": 1503,
+        "num_features": 5,
+        "tasks": [
+          "Regression"
+        ],
+        "doi": "10.24432/C5VW2C",
+        "year": 1989
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/291-airfoil+self+noise/extracted/airfoil_self_noise.dat",
+          "file_bytes": 59984,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": "\t",
+          "header": false,
+          "rows": 1503,
+          "cols": 6,
+          "columns_preview": [],
+          "columns": [],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 12,
+      "uci_id": 325,
+      "name": "Dataset for Sensorless Drive Diagnosis",
+      "slug": "dataset+for+sensorless+drive+diagnosis",
+      "source_url": "https://archive.ics.uci.edu/dataset/325/dataset+for+sensorless+drive+diagnosis",
+      "download_url": "https://archive.ics.uci.edu/static/public/325/dataset+for+sensorless+drive+diagnosis.zip",
+      "retrieved_at_utc": "2026-11-25T12:48:50Z",
+      "license": "CC BY 4.0",
+      "attribution": "Martyna Bator (2013). Dataset for Sensorless Drive Diagnosis. UCI Machine Learning Repository. https://doi.org/10.24432/C5VP5F",
+      "archive_path": "data/raw/325-dataset+for+sensorless+drive+diagnosis/325-dataset+for+sensorless+drive+diagnosis.zip",
+      "bytes": 25620028,
+      "sha256": "fbce04b326362156f007838cec6b12ab462113a467e7cc529f43471065460c77",
+      "zip_members": [
+        {
+          "name": "Sensorless_drive_diagnosis.txt",
+          "uncompressed_bytes": 25619870,
+          "compressed_bytes": 25619870,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/325-dataset+for+sensorless+drive+diagnosis/extracted",
+      "table_path": "data/raw/325-dataset+for+sensorless+drive+diagnosis/extracted/Sensorless_drive_diagnosis.txt",
+      "encoding": "utf-8-sig",
+      "delimiter": "whitespace",
+      "header": false,
+      "rows": 58509,
+      "cols": 49,
+      "target": "last column (11 classes)",
+      "task": "fault_diagnosis_multiclass",
+      "scenario": "无传感器电机驱动故障诊断：由电流/电压特征判别 11 种转子工况。",
+      "notes": "49 列、约 5.8 万行；末列为 11 类标签（电机负载/故障组合）。",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 1,
+      "zip_uncompressed_bytes": 25619870,
+      "primary_uci_id": 325,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": null,
+      "api": {
+        "num_instances": 58509,
+        "num_features": 0,
+        "tasks": [
+          "Classification"
+        ],
+        "doi": "10.24432/C5VP5F",
+        "year": 2013
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/325-dataset+for+sensorless+drive+diagnosis/extracted/Sensorless_drive_diagnosis.txt",
+          "file_bytes": 25619870,
+          "parsed": true,
+          "notes": "",
+          "encoding": "utf-8-sig",
+          "delimiter": "whitespace",
+          "header": false,
+          "rows": 58509,
+          "cols": 49,
+          "columns_preview": [],
+          "columns": [],
+          "ragged_rows": 0
+        }
+      ],
+      "other_members": []
+    },
+    {
+      "index": 13,
+      "uci_id": 294,
+      "name": "Combined Cycle Power Plant",
+      "slug": "combined+cycle+power+plant",
+      "source_url": "https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant",
+      "download_url": "https://archive.ics.uci.edu/static/public/294/combined+cycle+power+plant.zip",
+      "retrieved_at_utc": "2026-11-25T12:49:36Z",
+      "license": "CC BY 4.0",
+      "attribution": "Pnar Tfekci; Heysem Kaya (2014). Combined Cycle Power Plant. UCI Machine Learning Repository. https://doi.org/10.24432/C5002N",
+      "archive_path": "data/raw/294-combined+cycle+power+plant/294-combined+cycle+power+plant.zip",
+      "bytes": 3674852,
+      "sha256": "cc7b2a4977c0a44e8221c91d9a7e5746b3c68186cff7e5c61c70af6432b98c7a",
+      "zip_members": [
+        {
+          "name": "CCPP/",
+          "uncompressed_bytes": 0,
+          "compressed_bytes": 0,
+          "is_dir": true
+        },
+        {
+          "name": "CCPP/Folds5x2_pp.ods",
+          "uncompressed_bytes": 1723202,
+          "compressed_bytes": 1661775,
+          "is_dir": false
+        },
+        {
+          "name": "CCPP/Folds5x2_pp.xlsx",
+          "uncompressed_bytes": 2029440,
+          "compressed_bytes": 2010620,
+          "is_dir": false
+        },
+        {
+          "name": "CCPP/Readme.txt",
+          "uncompressed_bytes": 1793,
+          "compressed_bytes": 962,
+          "is_dir": false
+        },
+        {
+          "name": "CCPP/Readme.txt~",
+          "uncompressed_bytes": 1738,
+          "compressed_bytes": 939,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/294-combined+cycle+power+plant/extracted",
+      "table_path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Folds5x2_pp.xlsx",
+      "encoding": "binary (xlsx = zip/xml)",
+      "delimiter": null,
+      "header": true,
+      "rows": 9568,
+      "cols": 5,
+      "target": "PE",
+      "task": "regression",
+      "scenario": "联合循环电厂满负荷输出功率（PE）回归。",
+      "notes": "目标 PE = electrical energy output；5 个 sheet 为同一批 9,568 条记录的不同排序（PE 值集已独立核对）；建模时取其一以免重复计数。 非表成员：Folds5x2_pp.ods(alternate), Readme.txt(documentation), Readme.txt~(documentation) 5 个 sheet 行列数完全相同（各 9,568×5）",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 5,
+      "zip_uncompressed_bytes": 3756173,
+      "primary_uci_id": 294,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 9568,
+        "num_features": 4,
+        "tasks": [
+          "Regression"
+        ],
+        "doi": "10.24432/C5002N",
+        "year": 2014
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Folds5x2_pp.xlsx",
+          "file_bytes": 2029440,
+          "parsed": true,
+          "notes": "sheet=Sheet1",
+          "sheet": "Sheet1",
+          "encoding": "binary (xlsx = zip/xml)",
+          "delimiter": null,
+          "header": true,
+          "rows": 9568,
+          "cols": 5,
+          "columns": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ],
+          "columns_preview": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ]
+        },
+        {
+          "table_path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Folds5x2_pp.xlsx",
+          "file_bytes": 2029440,
+          "parsed": true,
+          "notes": "sheet=Sheet2",
+          "sheet": "Sheet2",
+          "encoding": "binary (xlsx = zip/xml)",
+          "delimiter": null,
+          "header": true,
+          "rows": 9568,
+          "cols": 5,
+          "columns": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ],
+          "columns_preview": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ]
+        },
+        {
+          "table_path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Folds5x2_pp.xlsx",
+          "file_bytes": 2029440,
+          "parsed": true,
+          "notes": "sheet=Sheet3",
+          "sheet": "Sheet3",
+          "encoding": "binary (xlsx = zip/xml)",
+          "delimiter": null,
+          "header": true,
+          "rows": 9568,
+          "cols": 5,
+          "columns": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ],
+          "columns_preview": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ]
+        },
+        {
+          "table_path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Folds5x2_pp.xlsx",
+          "file_bytes": 2029440,
+          "parsed": true,
+          "notes": "sheet=Sheet4",
+          "sheet": "Sheet4",
+          "encoding": "binary (xlsx = zip/xml)",
+          "delimiter": null,
+          "header": true,
+          "rows": 9568,
+          "cols": 5,
+          "columns": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ],
+          "columns_preview": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ]
+        },
+        {
+          "table_path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Folds5x2_pp.xlsx",
+          "file_bytes": 2029440,
+          "parsed": true,
+          "notes": "sheet=Sheet5",
+          "sheet": "Sheet5",
+          "encoding": "binary (xlsx = zip/xml)",
+          "delimiter": null,
+          "header": true,
+          "rows": 9568,
+          "cols": 5,
+          "columns": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ],
+          "columns_preview": [
+            "AT",
+            "V",
+            "AP",
+            "RH",
+            "PE"
+          ]
+        }
+      ],
+      "other_members": [
+        {
+          "path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Folds5x2_pp.ods",
+          "kind": "alternate",
+          "reason": "ODS serialisation; the XLSX twin is profiled instead"
+        },
+        {
+          "path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Readme.txt",
+          "kind": "documentation",
+          "reason": "readme/description file"
+        },
+        {
+          "path": "data/raw/294-combined+cycle+power+plant/extracted/CCPP/Readme.txt~",
+          "kind": "documentation",
+          "reason": "readme/description file"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "uci_id": 165,
+      "name": "Concrete Compressive Strength",
+      "slug": "concrete+compressive+strength",
+      "source_url": "https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength",
+      "download_url": "https://archive.ics.uci.edu/static/public/165/concrete+compressive+strength.zip",
+      "retrieved_at_utc": "2026-11-25T12:49:47Z",
+      "license": "CC BY 4.0",
+      "attribution": "I-Cheng Yeh (1998). Concrete Compressive Strength. UCI Machine Learning Repository. https://doi.org/10.24432/C5PK67",
+      "archive_path": "data/raw/165-concrete+compressive+strength/165-concrete+compressive+strength.zip",
+      "bytes": 34444,
+      "sha256": "dad85d14de8aee4e07479daa774e6b569a313715b71a3b92c95a07cf91c2c9a7",
+      "zip_members": [
+        {
+          "name": "Concrete_Data.xls",
+          "uncompressed_bytes": 124928,
+          "compressed_bytes": 32716,
+          "is_dir": false
+        },
+        {
+          "name": "Concrete_Readme.txt",
+          "uncompressed_bytes": 3808,
+          "compressed_bytes": 1450,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/165-concrete+compressive+strength/extracted",
+      "table_path": "data/raw/165-concrete+compressive+strength/extracted/Concrete_Data.xls",
+      "encoding": "binary (legacy xls)",
+      "delimiter": null,
+      "header": true,
+      "rows": 1030,
+      "cols": 9,
+      "target": "last column (concrete compressive strength)",
+      "task": "regression",
+      "scenario": "混凝土配合比（水泥/矿渣/粉煤灰/水/外加剂/骨料/龄期）预测抗压强度。",
+      "notes": "旧版 XLS 格式；预期 1030 行 x 9 列。 非表成员：Concrete_Readme.txt(documentation)",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 2,
+      "zip_uncompressed_bytes": 128736,
+      "primary_uci_id": 165,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": null,
+      "api": {
+        "num_instances": 1030,
+        "num_features": 8,
+        "tasks": [
+          "Regression"
+        ],
+        "doi": "10.24432/C5PK67",
+        "year": 1998
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/165-concrete+compressive+strength/extracted/Concrete_Data.xls",
+          "file_bytes": 124928,
+          "parsed": false,
+          "notes": "legacy XLS; parse needs xlrd",
+          "encoding": "binary (legacy xls)",
+          "delimiter": null,
+          "header": true,
+          "rows": 1030,
+          "cols": 9,
+          "columns_preview": [],
+          "rows_are_expected": true
+        }
+      ],
+      "other_members": [
+        {
+          "path": "data/raw/165-concrete+compressive+strength/extracted/Concrete_Readme.txt",
+          "kind": "documentation",
+          "reason": "readme/description file"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "uci_id": 602,
+      "name": "Dry Bean",
+      "slug": "dry+bean+dataset",
+      "source_url": "https://archive.ics.uci.edu/dataset/602/dry+bean+dataset",
+      "download_url": "https://archive.ics.uci.edu/static/public/602/dry+bean+dataset.zip",
+      "retrieved_at_utc": "2026-11-25T12:49:57Z",
+      "license": "CC BY 4.0",
+      "attribution": "UCI Machine Learning Repository (2020). Dry Bean. UCI Machine Learning Repository. https://doi.org/10.24432/C50S4B",
+      "archive_path": "data/raw/602-dry+bean+dataset/602-dry+bean+dataset.zip",
+      "bytes": 4738776,
+      "sha256": "0a64eff5be87f48c3dbbfc0a12a56c5d5b5167ef8e61cd45d69b3e7c7130c06f",
+      "zip_members": [
+        {
+          "name": "DryBeanDataset/",
+          "uncompressed_bytes": 0,
+          "compressed_bytes": 0,
+          "is_dir": true
+        },
+        {
+          "name": "DryBeanDataset/Dry_Bean_Dataset.arff",
+          "uncompressed_bytes": 3813205,
+          "compressed_bytes": 1703012,
+          "is_dir": false
+        },
+        {
+          "name": "DryBeanDataset/Dry_Bean_Dataset.txt",
+          "uncompressed_bytes": 3339,
+          "compressed_bytes": 1470,
+          "is_dir": false
+        },
+        {
+          "name": "DryBeanDataset/Dry_Bean_Dataset.xlsx",
+          "uncompressed_bytes": 3043341,
+          "compressed_bytes": 3033580,
+          "is_dir": false
+        }
+      ],
+      "extracted_path": "data/raw/602-dry+bean+dataset/extracted",
+      "table_path": "data/raw/602-dry+bean+dataset/extracted/DryBeanDataset/Dry_Bean_Dataset.xlsx",
+      "encoding": "binary (xlsx = zip/xml)",
+      "delimiter": null,
+      "header": true,
+      "rows": 13611,
+      "cols": 17,
+      "target": "Class",
+      "task": "multiclass_classification",
+      "scenario": "干豆形态学特征（面积/周长/长宽比等）7 类品种识别。",
+      "notes": "XLSX 含 Dry_Beans_Dataset（13,611×17，带表头）与 Citation_Request（仅 1 行引用文本，无数据行）；Class 为 7 类品种。 非表成员：Dry_Bean_Dataset.arff(alternate), Dry_Bean_Dataset.txt(documentation)",
+      "status": "ok",
+      "zip_test": "ok",
+      "zip_member_count": 4,
+      "zip_uncompressed_bytes": 6859885,
+      "primary_uci_id": 602,
+      "is_fallback": false,
+      "fallback_for": null,
+      "target_column_found": true,
+      "api": {
+        "num_instances": 13611,
+        "num_features": 16,
+        "tasks": [
+          "Classification"
+        ],
+        "doi": "10.24432/C50S4B",
+        "year": 2020
+      },
+      "tables": [
+        {
+          "table_path": "data/raw/602-dry+bean+dataset/extracted/DryBeanDataset/Dry_Bean_Dataset.xlsx",
+          "file_bytes": 3043341,
+          "parsed": true,
+          "notes": "sheet=Dry_Beans_Dataset",
+          "sheet": "Dry_Beans_Dataset",
+          "encoding": "binary (xlsx = zip/xml)",
+          "delimiter": null,
+          "header": true,
+          "rows": 13611,
+          "cols": 17,
+          "columns": [
+            "Area",
+            "Perimeter",
+            "MajorAxisLength",
+            "MinorAxisLength",
+            "AspectRation",
+            "Eccentricity",
+            "ConvexArea",
+            "EquivDiameter",
+            "Extent",
+            "Solidity",
+            "roundness",
+            "Compactness",
+            "ShapeFactor1",
+            "ShapeFactor2",
+            "ShapeFactor3",
+            "ShapeFactor4",
+            "Class"
+          ],
+          "columns_preview": [
+            "Area",
+            "Perimeter",
+            "MajorAxisLength",
+            "MinorAxisLength",
+            "AspectRation",
+            "Eccentricity",
+            "ConvexArea",
+            "EquivDiameter",
+            "Extent",
+            "Solidity"
+          ]
+        },
+        {
+          "table_path": "data/raw/602-dry+bean+dataset/extracted/DryBeanDataset/Dry_Bean_Dataset.xlsx",
+          "file_bytes": 3043341,
+          "parsed": true,
+          "notes": "sheet=Citation_Request",
+          "sheet": "Citation_Request",
+          "encoding": "binary (xlsx = zip/xml)",
+          "delimiter": null,
+          "header": true,
+          "rows": 1,
+          "cols": 1,
+          "columns": [],
+          "columns_preview": []
+        }
+      ],
+      "other_members": [
+        {
+          "path": "data/raw/602-dry+bean+dataset/extracted/DryBeanDataset/Dry_Bean_Dataset.arff",
+          "kind": "alternate",
+          "reason": "ARFF serialisation; the XLSX/CSV twin is profiled instead"
+        },
+        {
+          "path": "data/raw/602-dry+bean+dataset/extracted/DryBeanDataset/Dry_Bean_Dataset.txt",
+          "kind": "documentation",
+          "reason": "free-form text (modal row width 1 covers only 17/60 sampled lines)"
+        }
+      ]
+    }
+  ]
+}
