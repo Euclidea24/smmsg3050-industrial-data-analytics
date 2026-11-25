@@ -4,6 +4,7 @@
 
 | Date | Member | Tool / model | Purpose | Prompt summary | Output used in | Verified by |
 |---|---|---|---|---|---|---|
+| 2026-11-25 | Lzh328-SMMG | Kimi（Moonshot AI） | 实际读取 data/raw/ 全部 18 个数据集并体检（规模、缺失率、格式），生成前三名推荐排序 | “选出三个最好最简单轻松的数据集，读取并简单分析” | docs/00-topic-selection.md 的 Candidates 表与筛选说明 | 规模与缺失率由脚本实际输出，待 Lzh328-SMMG 复核 |
 | | | | | | | |
 
 ## Rules
