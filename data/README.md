@@ -1,6 +1,6 @@
 # Data
 
-Raw and processed data are **not committed**. This directory documents what the data is, where it came from, and how to obtain it.
+Raw data may be committed; derived data is not. This directory documents what the data is, where it came from, and how to obtain it.
 
 ## Dataset card
 
@@ -19,9 +19,9 @@ Raw and processed data are **not committed**. This directory documents what the 
 ## Placement
 
 ```text
-data/raw/        original files, read-only
-data/interim/    intermediate cleaned data
-data/processed/  model-ready data
+data/raw/        original files (may be committed; one copy only)
+data/interim/    intermediate cleaned data (not committed)
+data/processed/  model-ready data (not committed)
 ```
 
 ## Acquisition
@@ -30,6 +30,8 @@ Document the exact steps here, or provide `scripts/download_data.py`. If the dat
 
 ## Rules
 
-- Never commit raw data, credentials, or personal information.
-- Record the license and retrieval date before using the data.
+- Raw data may be committed under `data/raw/`; commit one copy only (archive or extracted files, not both).
+- Never commit credentials, personal information, or per-row predictions.
+- Record the license, retrieval date, checksum, and attribution before using the data.
 - Keep `data/raw/` read-only; write cleaned outputs to `data/interim/` or `data/processed/`.
+- GitHub rejects files over 100 MiB and warns above 50 MiB; use Git LFS or an external location for those.

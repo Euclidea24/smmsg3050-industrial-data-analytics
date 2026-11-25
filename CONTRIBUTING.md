@@ -12,10 +12,11 @@
 
 ## 数据与凭证
 
-- `data/raw/`、`data/interim/`、`data/processed/` 的实际数据不入库；`.env`、token、模型权重、逐条预测也不入库。
-- 原始数据只读；清洗结果写 `data/interim/` 或 `data/processed/`。
-- 数据来源、许可证、获取日期和校验和写在 [data/README.md](data/README.md)。
-- 单个文件达到 10 MiB 时先找外部位置，不直接提交。
+- `data/raw/` 的原始数据可以入库；同一份数据只提交一份（原始压缩包或解压后的文件，不要两份都放）。
+- `data/interim/`、`data/processed/` 是派生数据，默认不入库；需要共享时另开目录并说明生成方法。
+- `.env`、token、模型权重、逐条预测不入库。
+- 数据来源、许可证、获取日期、校验和与署名写在 [data/README.md](data/README.md) 和 `data/DATASETS.md`。
+- GitHub 单文件超过 100 MiB 会被拒绝，超过 50 MiB 会警告；遇到这种文件用 Git LFS 或外部位置。
 
 ## 报告数字复现
 

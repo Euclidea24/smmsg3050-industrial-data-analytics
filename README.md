@@ -92,8 +92,9 @@ Decision record: [`docs/00-topic-selection.md`](docs/00-topic-selection.md). Can
 
 ## Data rules
 
-- Raw data, credentials, and personal information are never committed. `data/raw/` is git-ignored.
-- Record dataset name, source URL, license, retrieval date, and checksum in [`data/README.md`](data/README.md).
+- Raw data may be committed under `data/raw/`; commit one copy only (archive or extracted files, not both). Derived data and personal information are not committed.
+- Credentials are never committed.
+- Record dataset name, source URL, license, retrieval date, checksum, and attribution in [`data/README.md`](data/README.md).
 - Split the data once, before any preprocessing that learns parameters (imputers, scalers, encoders, feature selection). Fit on training data only.
 - Do not inspect the test set until the final model is frozen. Report how many times the test set was evaluated.
 - Keep `data/raw/` read-only; write cleaned data to `data/interim/` or `data/processed/`.

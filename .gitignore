@@ -9,9 +9,8 @@ env/
 .ruff_cache/
 .mypy_cache/
 
-# ---- Data (never commit raw or large files) ----
-data/raw/*
-!data/raw/.gitkeep
+# ---- Data: raw files may be committed; derived and extracted copies are not ----
+data/raw/**/extracted/
 data/interim/*
 !data/interim/.gitkeep
 data/processed/*
@@ -20,6 +19,10 @@ data/processed/*
 *.feather
 *.npy
 *.npz
+!data/raw/**/*.parquet
+!data/raw/**/*.feather
+!data/raw/**/*.npy
+!data/raw/**/*.npz
 
 # ---- Model artifacts ----
 models/
