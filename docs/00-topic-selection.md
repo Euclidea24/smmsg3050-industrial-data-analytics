@@ -21,6 +21,18 @@
 
 Scoring: 5 = strong, 1 = weak. Weight industrial relevance and feasibility highest; a strong dataset we cannot finish scores zero.
 
+Full candidate list: `data/DATASETS.md` (15 UCI datasets) and `docs/data-sources.md` (6 teammate datasets). Shortlist the top five here.
+
+## Voting (3-2-1)
+
+Each member assigns **3 points** to their first choice, **2** to their second, and **1** to their third. Sum across members; the highest total wins. Record the tally here.
+
+| Member | 3 pts | 2 pts | 1 pt |
+|---|---|---|---|
+| | | | |
+
+Tie-break: prefer the dataset that covers more SMMG3050 units (data understanding, preprocessing, association/correlation, classification, clustering, visualization); if still tied, prefer the one with the clearer industrial decision.
+
 ## Screening questions
 
 1. **Industrial relevance.** Which process, asset, product, or operation does this affect? Who would use the result?
@@ -29,6 +41,7 @@ Scoring: 5 = strong, 1 = weak. Weight industrial relevance and feasibility highe
 4. **Feasibility.** Can we load the data, build a baseline, and produce a first metric within one day?
 5. **Interpretability.** Can we explain the result to a non-ML audience with two or three figures?
 6. **Reproducibility.** Can a teammate or the TA obtain the same data and rerun the pipeline?
+7. **Course fit.** How many SMMG3050 units can this dataset support: data understanding, preprocessing, association/correlation, classification, clustering, visualization?
 
 ## Decision
 

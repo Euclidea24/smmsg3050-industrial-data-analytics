@@ -2,7 +2,7 @@
 
 **Course:** SMMG3050 Industrial Data Analytics, HKUST(GZ), Fall 2026 · course project (25% of the final grade)  
 **Deliverables:** Project report and group presentation  
-**Hard deadline:** 2026-11-28 (late submissions score zero under the course policy)  
+**Hard deadline:** 2026-12-04 (project presentation on 2026-12-03; late submissions score zero under the course policy)  
 **Status:** Topic and dataset under selection — see [`docs/00-topic-selection.md`](docs/00-topic-selection.md)  
 **Stack:** To be fixed after the dataset is locked
 
@@ -131,11 +131,13 @@ Decision record: [`docs/00-topic-selection.md`](docs/00-topic-selection.md). Can
 | Date | Milestone | Output |
 |---|---|---|
 | 11-25 | Repository scaffold; list candidate datasets | README, candidate table in `docs/00` |
-| 11-26 | Lock topic and dataset; EDA, preprocessing, baselines | `docs/00` decision, notebooks, baseline |
-| 11-27 | Modeling, model selection, evaluation; freeze results | `docs/03-05`, figures |
-| 11-28 | Report, slides, rehearsal, submit | report PDF, slides |
+| 11-26 | Vote and lock topic/dataset | `docs/00` decision and tally |
+| 11-27–11-30 | Data audit, preprocessing, baselines | notebooks, baseline |
+| 12-01–12-02 | Modeling, model selection, evaluation, interpretation | `docs/03-05`, figures |
+| 12-03 | Project presentation | slides |
+| 12-04 | Final report, code, submission | report PDF, code |
 
-Submit by the morning of 11-28, not at 23:59. Leave a buffer for upload and last-minute format fixes.
+Submit by the morning of 12-04, not at 23:59. Leave a buffer for upload and last-minute format fixes.
 
 ## Submission checklist
 
