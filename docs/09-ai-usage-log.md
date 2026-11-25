@@ -4,6 +4,7 @@
 
 | Date | Member | Tool / model | Purpose | Prompt summary | Output used in | Verified by |
 |---|---|---|---|---|---|---|
+| 2026-11-25 | Lzh328-SMMG | Kimi（Moonshot AI） | 从文献 PDF 提取元数据并起草文献笔记、更新阅读清单 | “读取本仓库规则并按仓库规则提交我的这篇文献” | literature/papers/yang-2012-alarm-correlation.pdf、literature/notes/yang-2012.md、literature/reading-list.md | 待 Lzh328-SMMG 对照 PDF 原文复核 |
 | | | | | | | |
 
 ## Rules
