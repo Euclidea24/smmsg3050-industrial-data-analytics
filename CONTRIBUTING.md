@@ -2,19 +2,14 @@
 
 3–4 人，2026-11-28 硬截止，public 仓库。只保留会影响结果的规则；技术栈和数据集未定，不预设立场。
 
-## 直接推送
+## PR 与轮值整合
 
-- 所有成员直接推 `main`，不需要 PR 或队友审核。
-- 推前先 `git pull --ff-only origin main`；有分叉就 `git merge origin/main`，解决冲突后再推。
-- 不覆盖队友未提交的改动，不强推 `main`，不用 `reset --hard` 处理未知改动。
-- 需要讨论的大改动可以开 PR（[模板](.github/pull_request_template.md)），但不强制、不设审批。
-
-## 大版本
-
-- 每天 22:00 前由一位成员轮值总结一次，打 tag `v0.x`，在 [docs/VERSIONS.md](docs/VERSIONS.md) 记：日期、轮值人、当前数据集、最佳结果、阻塞、下一步。
-- 轮值顺序写在 [docs/VERSIONS.md](docs/VERSIONS.md)；缺席顺延。
-- 大版本是回滚点，不是审批点；不要求代码冻结。
-- 推送 tag：`git push origin v0.x`。
+- 所有改动从最新 `main` 开短分支，推分支、开 PR，`base` 选 `main`；按 [PR 模板](.github/pull_request_template.md) 写清改动和验证。
+- 作者不直接合并到 `main`。不需要队友审核；PR 由当班轮值人收束。
+- 轮值人每天 22:00 前汇总当班 PR：看差异、解决冲突、合并到 `main`，在 [docs/VERSIONS.md](docs/VERSIONS.md) 写总结并打 tag `v0.x`。
+- 轮值人的总结提交可以直接进 `main`，只改 `docs/VERSIONS.md` 和 tag。
+- 轮值顺序写在 [docs/VERSIONS.md](docs/VERSIONS.md)；缺席顺延。可以提前合并，但每天至少收束一次。
+- 不强推 `main`，不覆盖队友未提交的改动，不用 `reset --hard` 处理未知改动。
 
 ## 数据与凭证
 
