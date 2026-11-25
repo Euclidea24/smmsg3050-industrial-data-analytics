@@ -13,3 +13,4 @@
 - Verify generated code by running it and reading it; verify generated text against sources.
 - Never submit fabricated citations, dataset statistics, or results.
 - Do not paste confidential or licensed data into external services.
+- Include an AI usage statement in the final report, as required by the course.

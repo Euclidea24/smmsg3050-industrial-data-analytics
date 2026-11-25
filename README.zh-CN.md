@@ -27,6 +27,7 @@
 │   └── processed/      # 建模用数据，不入库
 ├── docs/               # 按评分表组织的文档与计划
 ├── figures/            # 报告和幻灯片使用的图
+├── literature/         # 期中文献、阅读笔记与方法迁移评估
 ├── notebooks/          # 探索性分析，按 01_、02_ 编号
 ├── reports/            # 报告与展示源文件
 ├── scripts/            # 入口脚本：下载数据、跑实验
@@ -99,15 +100,16 @@ pip install -r requirements.txt
 
 ## 可复现性
 
-- 报告中的每张图、每张表都必须由已提交的脚本或 notebook 重新生成。
+- 报告中的每张图、每张表都必须由已提交的脚本与配置重新生成。
 - 固定随机种子，并写进配置文件。
 - 在 [`docs/08-reproducibility.md`](docs/08-reproducibility.md) 记录 Python 版本、依赖版本和硬件。
 - 目标是用一条命令从原始数据复现最终结果。
 
 ## 协作流程
 
+- 完整流程见 [`CONTRIBUTING.md`](CONTRIBUTING.md)；开 PR 时按 [PR 模板](.github/pull_request_template.md) 填写。
 - `main` 是集成分支。开发用短分支：`feat/...`、`exp/...`、`docs/...`、`fix/...`。
-- 任何改动共享结果、代码或报告正文的工作都开 Pull Request；合并前至少一名队友看过。
+- 任何改动共享结果、代码或报告正文的工作都开 Pull Request，至少一名队友看过后由作者合并；纯错字、链接、格式修正可自检后合并。
 - PR 尽量小且单一主题，不要在一个 PR 里混数据、代码和报告改动。
 - 任务用 Issue 跟踪。建议标签：`data`、`model`、`eval`、`report`、`slides`、`blocked`。
 - 决策要落到仓库里（Issue、PR 或对应的 `docs/` 文件），不要只留在聊天记录。
@@ -125,9 +127,9 @@ pip install -r requirements.txt
 
 | 日期 | 里程碑 | 产出 |
 |---|---|---|
-| 11-25 | 锁定课题与数据集；完成仓库骨架 | 填好 `docs/00`、`data/README.md` |
-| 11-26 | 探索性分析、预处理、基线模型 | `notebooks/01-02`、基线分数 |
-| 11-27 | 建模、模型选择、评估；冻结结果 | `docs/03-05`、图表 |
+| 11-25 | 仓库骨架；列出候选数据集 | README、docs/00 候选表 |
+| 11-26 | 锁定课题与数据集；EDA、预处理、基线 | docs/00 决策、notebooks、基线 |
+| 11-27 | 建模、模型选择、评估；冻结结果 | docs/03-05、图表 |
 | 11-28 | 报告、幻灯片、排练、提交 | 报告 PDF、幻灯片 |
 
 请在 11-28 上午提交，不要拖到 23:59；给上传和格式修复留出缓冲。

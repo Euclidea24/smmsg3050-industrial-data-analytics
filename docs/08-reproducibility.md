@@ -36,3 +36,11 @@
 | | | | |
 
 Known nondeterminism:
+
+## Number index
+
+| Report location | Value | Commit | Command | Config | Data checksum | Output key | Verified by |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+| | | | | | | | |
+| | | | | | | | |

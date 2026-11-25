@@ -12,18 +12,18 @@
 
 ## Slide plan
 
-| # | Slide | Message | Speaker | Time |
-|---|---|---|---|---|
-| 1 | Title | Course, team, topic | | 0:30 |
-| 2 | Industrial problem | Why it matters | | 1:30 |
-| 3 | Data | Source, size, quality | | 1:30 |
-| 4 | Method | Pipeline in one diagram | | 2:00 |
-| 5 | Results | Main metric + uncertainty | | 2:00 |
-| 6 | Model selection | Why this model | | 1:30 |
-| 7 | Interpretation | What drives the result | | 1:30 |
-| 8 | Limitations | What we cannot claim | | 1:00 |
-| 9 | Conclusion | Answer + takeaway | | 1:00 |
-| 10 | Backup | Extra results, Q&A support | | — |
+| # | Slide | Message | Speaker | Owner | Reviewer | Time |
+|---|---|---|---|---|---|---|
+| 1 | Title | Course, team, topic | | TBD | TBD | 0:30 |
+| 2 | Industrial problem | Why it matters | | TBD | TBD | 1:30 |
+| 3 | Data | Source, size, quality | | TBD | TBD | 1:30 |
+| 4 | Method | Pipeline in one diagram | | TBD | TBD | 2:00 |
+| 5 | Results | Main metric + uncertainty | | TBD | TBD | 2:00 |
+| 6 | Model selection | Why this model | | TBD | TBD | 1:30 |
+| 7 | Interpretation | What drives the result | | TBD | TBD | 1:30 |
+| 8 | Limitations | What we cannot claim | | TBD | TBD | 1:00 |
+| 9 | Conclusion | Answer + takeaway | | TBD | TBD | 1:00 |
+| 10 | Backup | Extra results, Q&A support | | TBD | TBD | — |
 
 ## Q&A preparation
 
