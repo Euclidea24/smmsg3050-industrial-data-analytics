@@ -11,6 +11,7 @@ env/
 
 # ---- Data: raw files may be committed; derived and extracted copies are not ----
 data/raw/**/extracted/
+data/raw/_download_state.json
 data/interim/*
 !data/interim/.gitkeep
 data/processed/*
