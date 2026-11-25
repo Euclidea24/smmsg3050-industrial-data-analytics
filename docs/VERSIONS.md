@@ -6,10 +6,15 @@ Authors open PRs; the integrator is the only one who merges them. If a PR is urg
 
 | Tag | Date | Integrator | Dataset | Best result | Blockers | Next step |
 |---|---|---|---|---|---|---|
+| v001-11252149 | 2026-11-25 | Euclidea24 | AI4I 2020 | vote 5 (Hydraulic 4) | AI4I is zip-only | extract + baseline |
 | v0.1 | 2026-11-25 | | | | | |
 | v0.2 | 2026-11-26 | | | | | |
 | v0.3 | 2026-11-27 | | | | | |
-| v1.0 | 2026-11-28 | | | | | |
+| v0.4 | 2026-11-30 | | | | | |
+| v0.5 | 2026-12-01 | | | | | |
+| v0.6 | 2026-12-02 | | | | | |
+| v1.0 | 2026-12-03 | | | | | |
+| v1.1 | 2026-12-04 | | | | | |
 
 ## Rotation
 

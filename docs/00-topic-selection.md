@@ -1,6 +1,6 @@
 # 00 · Topic and Dataset Selection
 
-**Status:** decided (dataset choice frozen; open issues below)
+**Status:** vote complete — AI4I selected (2026-11-25); HapLotes' pre-vote scoring is retained below
 **Owner:** TBD
 **Decision deadline:** 2026-11-26
 **Linked from:** `README.md` § Topic and dataset selection
@@ -85,6 +85,8 @@ Not scored: three archives duplicate already-extracted datasets (`179-secom.zip`
 **Sensitivity:** raising the presentation weight to 35% moves **SECOM from 1st to 5th** and **Hydraulic from 2nd to 1st**, and pulls AI4I into the top three. The two rankings agree that Hydraulic is top-two; they disagree on whether depth (SECOM) or showmanship (AI4I, Gas) matters more.
 
 ## Decision
+
+> **Vote result (2026-11-25):** the group's 3-2-1 vote selects **AI4I 2020** (5 points; Hydraulic 4; Gas Drift 3; SECOM 3; Combined Cycle 2; Steel Plates 1). The decision below records HapLotes' pre-vote recommendation. Full tally: [`docs/summaries/v001-11252149.md`](summaries/v001-11252149.md).
 
 - **Chosen (primary): Hydraulic condition monitoring (447).**
   - Four independent targets (cooler / valve / pump / accumulator + stability) → one dataset yields a multi-task story.
