@@ -1,10 +1,10 @@
 # Data
 
-Raw and processed data are **not committed**. This directory documents what the data is, where it came from, and how to obtain it.
+Raw data may be committed; derived data is not. This directory documents what the data is, where it came from, and how to obtain it.
 
-**当前状态（2026-11-25）：选题阶段。** 组内提出 5 个候选选题，对应 5 个候选数据集。其中 3 个已下载到本机 `data/raw/`（不入库），2 个需要账号登录手动下载。最终选定题目后，仅保留对应卡片并把其余移入本节末尾的“未选用”列表。
+**当前状态（2026-11-25）：选题阶段。** 组内提出 5 个候选选题，对应 5 个候选数据集。其中 3 个已下载并入库 `data/raw/`（按新规则，原始数据可提交，每份只提交一份），2 个需要账号登录手动下载。最终选定题目后，仅保留对应卡片并把其余移入本节末尾的“未选用”列表。
 
-## Candidate 1 · 航空发动机剩余寿命预测（C-MAPSS）✅ 已下载
+## Candidate 1 · 航空发动机剩余寿命预测（C-MAPSS）✅ 已下载并入库
 
 | Field | Value |
 |---|---|
@@ -18,7 +18,7 @@ Raw and processed data are **not committed**. This directory documents what the 
 | Unit of analysis | 单台发动机 × 单个运行循环（26 列 = 单元号、循环数、3 个工况设置、21 个传感器） |
 | Known issues | 传感器含噪声；FD002/FD004 有 6 种工况需先聚类或归一化；readme.txt 为 Windows-1252 编码 |
 
-## Candidate 2 · 机器故障预测（AI4I 2020）✅ 已下载
+## Candidate 2 · 机器故障预测（AI4I 2020）✅ 已下载并入库
 
 | Field | Value |
 |---|---|
@@ -32,7 +32,7 @@ Raw and processed data are **not committed**. This directory documents what the 
 | Unit of analysis | 单个机器数据点（温度、转速、扭矩、刀具磨损等传感特征） |
 | Known issues | 故障标签存在重叠与泄漏风险：TWF/HDF/PWF/OSF/RNF 是故障类型标签，建模时需与主标签区分处理；官方说明 RNF 为随机故障 |
 
-## Candidate 3 · 半导体不良品预测（SECOM）✅ 已下载
+## Candidate 3 · 半导体不良品预测（SECOM）✅ 已下载并入库
 
 | Field | Value |
 |---|---|
@@ -46,7 +46,7 @@ Raw and processed data are **not committed**. This directory documents what the 
 | Unit of analysis | 单片晶圆 |
 | Known issues | 极度不平衡（不良品 6.64%）；缺失值约 4.54%，部分特征近乎常数；特征匿名无语义 |
 
-## Candidate 4 · 钢材表面缺陷图像分类（NEU）⚠️ 待手动下载
+## Candidate 4 · 钢材表面缺陷图像分类（NEU）⚠️ 待手动下载（暂缓）
 
 | Field | Value |
 |---|---|
@@ -60,7 +60,7 @@ Raw and processed data are **not committed**. This directory documents what the 
 | Unit of analysis | 单张表面图像 |
 | Known issues | 需要 Kaggle 账号登录才能下载；下载步骤见下方“获取步骤” |
 
-## Candidate 5 · 工业蒸汽量预测（天池）⚠️ 待手动下载
+## Candidate 5 · 工业蒸汽量预测（天池）⚠️ 待手动下载（暂缓）
 
 | Field | Value |
 |---|---|
@@ -99,51 +99,49 @@ AI4I 与 SECOM 的校验和见各自卡片的 Version / checksum 行。
 ## Placement
 
 ```text
-data/raw/        original files, read-only
-data/interim/    intermediate cleaned data
-data/processed/  model-ready data
+data/raw/        original files (may be committed; one copy only)
+data/interim/    intermediate cleaned data (not committed)
+data/processed/  model-ready data (not committed)
 ```
 
-当前本地布局：
+当前布局（均已提交，均为解压后的唯一一份拷贝）：
 
 ```text
-data/raw/cmapss/CMAPSSData/      ✅ 选题一（13 个文件）
-data/raw/ai4i-2020/ai4i2020.csv  ✅ 选题二
-data/raw/secom/                  ✅ 选题三（secom.data / secom_labels.data / secom.names）
-data/raw/neu-surface-defect/     ⬜ 选题四（待下载）
-data/raw/tianchi-steam/          ⬜ 选题五（待下载）
+data/raw/cmapss/CMAPSSData/      ✅ 选题一（13 个文件，43.2 MiB）
+data/raw/ai4i-2020/ai4i2020.csv  ✅ 选题二（0.5 MiB）
+data/raw/secom/                  ✅ 选题三（secom.data / secom_labels.data / secom.names，5.5 MiB）
+data/raw/neu-surface-defect/     ⬜ 选题四（暂缓）
+data/raw/tianchi-steam/          ⬜ 选题五（暂缓）
 ```
 
 ## Acquisition
 
-已下载的 3 个数据集可用以下命令复现获取（Windows 可用 Git Bash 执行；校验和见上文）：
+已入库的 3 个数据集可用以下命令复现获取（Windows 可用 Git Bash 执行；校验和见上文）：
 
 ```bash
 # C-MAPSS（选题一）
 curl -L -o cmapss.zip "https://phm-datasets.s3.amazonaws.com/NASA/6.+Turbofan+Engine+Degradation+Simulation+Data+Set.zip"
-# 解压后内层还有 CMAPSSData.zip，需再次解压到 data/raw/cmapss/CMAPSSData/
+# 解压后内层还有 CMAPSSData.zip，需再次解压
 
 # AI4I 2020（选题二）
 curl -L -o ai4i.zip "https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip"
-# 解压 ai4i2020.csv 到 data/raw/ai4i-2020/
 
 # SECOM（选题三）
 curl -L -o secom.zip "https://archive.ics.uci.edu/static/public/179/secom.zip"
-# 解压到 data/raw/secom/
 ```
 
-待手动下载的 2 个数据集（需账号登录）：
+待手动下载的 2 个数据集（需账号登录，暂缓）：
 
-1. **NEU（选题四）**：浏览器打开 Kaggle 数据集页 → 登录 → 点 “Download” 按钮 → 解压到 `data/raw/neu-surface-defect/`。
-2. **天池（选题五）**：浏览器打开赛题页 → 登录阿里云账号 → 报名/接受条款 → 在“数据集”页签下载 → 解压到 `data/raw/tianchi-steam/`。
-
-下载完成后补全对应卡片的 Retrieval date 与 checksum，并把状态改为已下载。
+1. **NEU（选题四）**：浏览器打开 Kaggle 数据集页 → 登录 → 点 “Download” 按钮 → 解压。
+2. **天池（选题五）**：浏览器打开赛题页 → 登录阿里云账号 → 报名/接受条款 → 在“数据集”页签下载。
 
 ## Rules
 
-- Never commit raw data, credentials, or personal information.
-- Record the license and retrieval date before using the data.
+- Raw data may be committed under `data/raw/`; commit one copy only (archive or extracted files, not both).
+- Never commit credentials, personal information, or per-row predictions.
+- Record the license, retrieval date, checksum, and attribution before using the data.
 - Keep `data/raw/` read-only; write cleaned outputs to `data/interim/` or `data/processed/`.
+- GitHub rejects files over 100 MiB and warns above 50 MiB; use Git LFS or an external location for those.
 
 ## 未选用
 

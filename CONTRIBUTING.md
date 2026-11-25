@@ -2,20 +2,22 @@
 
 3–4 人，2026-11-28 硬截止，public 仓库。只保留会影响结果的规则；技术栈和数据集未定，不预设立场。
 
-## 分支与 PR
+## PR 与轮值整合
 
-- 所有改动从最新 `main` 开短分支，分支名 `<名字>/<主题>`，例如 `junbin/topic-choice`。
-- 改完推分支、开 PR，`base` 选 `main`；按 [PR 模板](.github/pull_request_template.md) 写清改动和验证。
-- 影响共享结果、代码或报告正文的改动，至少一名队友看过后再合并；只改错字、链接、格式的 PR 可自检后合并。
-- 冲突时在自己分支 `git merge origin/main`，和原作者核对两边意图后再解决。
-- 不覆盖队友未提交的改动，不强推 `main`，不用 `reset --hard` 处理未知改动。
+- 所有改动从最新 `main` 开短分支，推分支、开 PR，`base` 选 `main`；按 [PR 模板](.github/pull_request_template.md) 写清改动和验证。
+- 作者不直接合并到 `main`。不需要队友审核；PR 由当班轮值人收束。
+- 轮值人每天 22:00 前汇总当班 PR：看差异、解决冲突、合并到 `main`，在 [docs/VERSIONS.md](docs/VERSIONS.md) 写总结并打 tag `v0.x`。
+- 轮值人的总结提交可以直接进 `main`，只改 `docs/VERSIONS.md` 和 tag。
+- 轮值顺序写在 [docs/VERSIONS.md](docs/VERSIONS.md)；缺席顺延。可以提前合并，但每天至少收束一次。
+- 不强推 `main`，不覆盖队友未提交的改动，不用 `reset --hard` 处理未知改动。
 
 ## 数据与凭证
 
-- `data/raw/`、`data/interim/`、`data/processed/` 的实际数据不入库；`.env`、token、模型权重、逐条预测也不入库。
-- 原始数据只读；清洗结果写 `data/interim/` 或 `data/processed/`。
-- 数据来源、许可证、获取日期和校验和写在 [data/README.md](data/README.md)。
-- 单个文件达到 10 MiB 时先找外部位置，不直接提交。
+- `data/raw/` 的原始数据可以入库；同一份数据只提交一份（原始压缩包或解压后的文件，不要两份都放）。
+- `data/interim/`、`data/processed/` 是派生数据，默认不入库；需要共享时另开目录并说明生成方法。
+- `.env`、token、模型权重、逐条预测不入库。
+- 数据来源、许可证、获取日期、校验和与署名写在 [data/README.md](data/README.md) 和 `data/DATASETS.md`。
+- GitHub 单文件超过 100 MiB 会被拒绝，超过 50 MiB 会警告；遇到这种文件用 Git LFS 或外部位置。
 
 ## 报告数字复现
 

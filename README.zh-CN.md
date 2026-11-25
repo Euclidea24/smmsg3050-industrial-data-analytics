@@ -92,8 +92,9 @@ pip install -r requirements.txt
 
 ## 数据规则
 
-- 原始数据、凭证和个人信息一律不入库。`data/raw/` 已加入 `.gitignore`。
-- 在 [`data/README.md`](data/README.md) 记录数据集名称、来源链接、许可证、获取日期和校验和。
+- `data/raw/` 的原始数据可以入库；同一份数据只提交一份（压缩包或解压文件，不要两份都放）。派生数据和个人信息不入库。
+- 凭证一律不入库。
+- 在 [`data/README.md`](data/README.md) 记录数据集名称、来源链接、许可证、获取日期、校验和与署名。
 - 只切分一次数据，且要在任何“需要学习参数”的预处理（缺失值填补、标准化、编码、特征选择）之前完成；这些步骤只在训练集上拟合。
 - 最终模型冻结之前不要查看测试集，并记录测试集被评估过几次。
 - `data/raw/` 保持只读；清洗结果写到 `data/interim/` 或 `data/processed/`。
@@ -107,9 +108,11 @@ pip install -r requirements.txt
 
 ## 协作流程
 
-- 完整流程见 [`CONTRIBUTING.md`](CONTRIBUTING.md)；开 PR 时按 [PR 模板](.github/pull_request_template.md) 填写。
-- `main` 是集成分支。开发用短分支：`feat/...`、`exp/...`、`docs/...`、`fix/...`。
-- 任何改动共享结果、代码或报告正文的工作都开 Pull Request，至少一名队友看过后由作者合并；纯错字、链接、格式修正可自检后合并。
+- 完整流程见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
+- 每个改动都开 PR，作者不自行合并到 `main`。
+- 不需要队友审核；由当班轮值人收束。
+- 每天 22:00 前，轮值人在 [`docs/VERSIONS.md`](docs/VERSIONS.md) 写总结并打 tag `v0.x`；这是回滚点，不是审批点。
+- 不强推 `main`，不覆盖队友工作。
 - PR 尽量小且单一主题，不要在一个 PR 里混数据、代码和报告改动。
 - 任务用 Issue 跟踪。建议标签：`data`、`model`、`eval`、`report`、`slides`、`blocked`。
 - 决策要落到仓库里（Issue、PR 或对应的 `docs/` 文件），不要只留在聊天记录。

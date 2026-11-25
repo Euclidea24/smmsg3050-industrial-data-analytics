@@ -92,8 +92,9 @@ Decision record: [`docs/00-topic-selection.md`](docs/00-topic-selection.md). Can
 
 ## Data rules
 
-- Raw data, credentials, and personal information are never committed. `data/raw/` is git-ignored.
-- Record dataset name, source URL, license, retrieval date, and checksum in [`data/README.md`](data/README.md).
+- Raw data may be committed under `data/raw/`; commit one copy only (archive or extracted files, not both). Derived data and personal information are not committed.
+- Credentials are never committed.
+- Record dataset name, source URL, license, retrieval date, checksum, and attribution in [`data/README.md`](data/README.md).
 - Split the data once, before any preprocessing that learns parameters (imputers, scalers, encoders, feature selection). Fit on training data only.
 - Do not inspect the test set until the final model is frozen. Report how many times the test set was evaluated.
 - Keep `data/raw/` read-only; write cleaned data to `data/interim/` or `data/processed/`.
@@ -107,9 +108,11 @@ Decision record: [`docs/00-topic-selection.md`](docs/00-topic-selection.md). Can
 
 ## Collaboration workflow
 
-- Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full workflow; when opening a pull request, follow the [PR template](.github/pull_request_template.md).
-- `main` is the integration branch. Use short-lived branches: `feat/...`, `exp/...`, `docs/...`, `fix/...`.
-- Open a pull request for anything that changes shared results, code, or report text: pure typo, link, and formatting fixes can be self-checked and merged; anything else needs at least one teammate to look at it before merge.
+- Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full workflow.
+- Open a PR for every change; authors do not merge into `main`.
+- No teammate review is required. The rotating integrator merges the open PRs.
+- Every day before 22:00, the integrator writes the summary in [`docs/VERSIONS.md`](docs/VERSIONS.md) and tags `v0.x`. This is a rollback point, not an approval gate.
+- Never force-push `main` or overwrite a teammate's work.
 - Keep pull requests small and scoped; do not mix data, code, and report changes in one PR.
 - Use issues for tasks. Suggested labels: `data`, `model`, `eval`, `report`, `slides`, `blocked`.
 - Decisions belong in the repository (issue, PR, or the relevant `docs/` file), not only in chat.

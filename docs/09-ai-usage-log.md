@@ -4,7 +4,7 @@
 
 | Date | Member | Tool / model | Purpose | Prompt summary | Output used in | Verified by |
 |---|---|---|---|---|---|---|
-| 2026-11-25 | Lzh328-SMMG | Kimi（Moonshot AI） | 从官方源下载 3 个候选数据集、验证规模并计算 SHA256 校验和、起草 data/README.md 数据集卡片 | “下载对应数据集，把这些数据集 git 到 3050 的仓库里” | data/README.md（数据文件本身按规则留在本地 data/raw/，未提交） | 下载来源为 NASA/UCI 官方；规模与校验和由脚本实际输出，待 Lzh328-SMMG 复核 |
+| 2026-11-25 | Lzh328-SMMG | Kimi（Moonshot AI） | 从官方源下载 3 个候选数据集、验证规模并计算 SHA256 校验和、起草 data/README.md 数据集卡片 | “下载对应数据集，把这些数据集 git 到 3050 的仓库里” | data/README.md 及 data/raw/ 下 3 个数据集（规则更新后原始数据已入库） | 下载来源为 NASA/UCI 官方；规模与校验和由脚本实际输出，待 Lzh328-SMMG 复核 |
 | | | | | | | |
 
 ## Rules
